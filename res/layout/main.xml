@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:scrollbars="none">
+
+    <LinearLayout
+		android:id="@+id/layout"
+		android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+
+       	<TextView android:id="@+id/label_accelerometer"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Accelerometer" />
+       	<TextView android:id="@+id/name_accelerometer"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xbox"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/ybox"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/zbox"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+       	<TextView android:id="@+id/label_orientation"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Orientation" />
+       	<TextView android:id="@+id/name_orientation"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxo"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/yboxo"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/zboxo"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+       	<TextView android:id="@+id/label_magnetic_field"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/magneticfield" />
+       	<TextView android:id="@+id/name_magnetic"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxm"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/yboxm"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/zboxm"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+       	<TextView android:id="@+id/label_gravity"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Gravity" />
+       	<TextView android:id="@+id/name_gravity"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxg"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/yboxg"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/zboxg"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+       	<TextView android:id="@+id/label_gyroscope"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Gyroscope" />
+       	<TextView android:id="@+id/name_gyroscope"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxgy"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/yboxgy"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/zboxgy"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+    </LinearLayout>
+    
+
+</ScrollView>
