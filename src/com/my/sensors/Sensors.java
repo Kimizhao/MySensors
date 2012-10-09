@@ -19,6 +19,7 @@ package com.my.sensors;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -50,6 +51,7 @@ OS / Sensors
 public class Sensors extends Activity {
     private SensorManager mSensorManager;
     private GraphView mGraphView;
+    private static final String TAG = "Sensors";
 
     private class GraphView extends View implements SensorEventListener
     {
@@ -172,6 +174,12 @@ public class Sensors extends Activity {
 
         public void onSensorChanged(SensorEvent event) {
             //Log.d(TAG, "sensor: " + sensor + ", x: " + values[0] + ", y: " + values[1] + ", z: " + values[2]);
+        	//Log.d(TAG, "sensor: " + ", x: " + event.values[0] + ", y: " + event.values[1] + ", z: " + event.values[2]);
+        	//Log.d(TAG, "sensor tpye: " + event.sensor.getType() + ", name: " + event.sensor.getName());
+        	if(event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
+        		
+        		Log.d(TAG, "sensor tpye: " + event.sensor.getType() + ", name: " + event.sensor.getName());
+        	}
             synchronized (this) {
                 if (mBitmap != null) {
                     final Canvas canvas = mCanvas;
@@ -228,9 +236,12 @@ public class Sensors extends Activity {
         mSensorManager.registerListener(mGraphView,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
                 SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(mGraphView, 
+        mSensorManager.registerListener(mGraphView,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
                 SensorManager.SENSOR_DELAY_FASTEST);
+        mSensorManager.registerListener(mGraphView,
+                mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR),
+                10000);
     }
     
     @Override

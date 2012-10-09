@@ -40,6 +40,12 @@ public class allsensor extends Activity implements SensorEventListener {
 	    TextView yViewGy = null;
 	    TextView zViewGy = null;
 	    
+	    TextView nameProximityView = null;
+	    TextView xViewPro = null;
+	    
+	    TextView nameLightView = null;
+	    TextView xViewLig = null;
+	    
 	    /** Called when the activity is first created. */
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +78,12 @@ public class allsensor extends Activity implements SensorEventListener {
 	        xViewGy = (TextView) findViewById(R.id.xboxgy);
 	        yViewGy = (TextView) findViewById(R.id.yboxgy);
 	        zViewGy = (TextView) findViewById(R.id.zboxgy);
+	        
+	        nameProximityView = (TextView) findViewById(R.id.name_proximity);
+	        xViewPro = (TextView) findViewById(R.id.xboxpro);
+	        
+	        nameLightView = (TextView) findViewById(R.id.name_light);
+	        xViewLig = (TextView) findViewById(R.id.xboxlig);
 	    }
 	    
 	    public void onSensorChanged(SensorEvent event) {
@@ -113,6 +125,17 @@ public class allsensor extends Activity implements SensorEventListener {
 	            	zViewGy.setText("Gyroscope Z: " + event.values[2] + " rad/s");
 	            	
 	            }
+	            
+	            if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
+	            	nameProximityView.setText("Proximity device name : " + event.sensor.getName());
+	            	xViewPro.setText("Proximity distance : " + event.values[0] + " cm");
+	            }
+	            
+	            if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
+	            	nameLightView.setText("Light device name : " + event.sensor.getName());
+	            	xViewLig.setText("Light illumination : " + event.values[0] + " lx");
+	            	
+	            }
 	        }
 	    }
 	    
@@ -142,6 +165,14 @@ public class allsensor extends Activity implements SensorEventListener {
 	        
 	        sm.registerListener(this,
 	        		sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE),
+	        		SensorManager.SENSOR_DELAY_NORMAL);
+	        
+	        sm.registerListener(this,
+	        		sm.getDefaultSensor(Sensor.TYPE_PROXIMITY),
+	        		SensorManager.SENSOR_DELAY_NORMAL);
+	        
+	        sm.registerListener(this,
+	        		sm.getDefaultSensor(Sensor.TYPE_LIGHT),
 	        		SensorManager.SENSOR_DELAY_NORMAL);
 	        		
 	    }

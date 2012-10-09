@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MySensor</string>
+    <string name="Accelerometer">Accelerometer(加速度计)</string>
+    <string name="Orientation">Orientation（方向）</string>
+    <string name="magneticfield">Magnetic field（磁场/电子罗盘）</string>
+    <!-- Measures the force of gravity in m/s2 that is applied to a device on all three physical axes (x, y, z). -->
+    <string name="Gravity">Gravity(重力加速度xyz m/s2)</string>
+    <!-- Measures a device's rate of rotation in rad/s around each of the three physical axes (x, y, and z). -->
+    <string name="Gyroscope">Gyroscope(角加速度/三轴陀螺仪xyz rad/s)</string>
+	<!-- Measures the proximity of an object in cm relative to the view screen of a device. This sensor is typically used to determine whether a handset is being held up to a person's ear. -->
+	<string name="Proximity">Proximity(接近/临近传感器)</string>
+	<!-- Measures the ambient light level (illumination) in lx. -->
+	<string name="Light">Light(光照/照度)</string>
 </resources>

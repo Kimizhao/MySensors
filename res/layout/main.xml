@@ -94,6 +94,28 @@
        	    android:layout_width="match_parent"
        	    android:layout_height="wrap_content" />
        	
+       	<TextView android:id="@+id/label_proximity"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Proximity" />
+       	<TextView android:id="@+id/name_proximity"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxpro"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	
+       	<TextView android:id="@+id/label_light"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Light" />
+       	<TextView android:id="@+id/name_light"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+       	<TextView android:id="@+id/xboxlig"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content" />
+
     </LinearLayout>
     
 

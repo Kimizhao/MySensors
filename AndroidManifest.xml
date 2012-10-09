@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         
         
-		<activity android:name="com.my.sensors.Sensors"
+		<activity android:name="com.my.sensors.allsensor"
 			android:label="@string/app_name">
 			 <intent-filter>
 			        <action android:name="android.intent.action.MAIN" />
